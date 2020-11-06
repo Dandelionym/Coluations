@@ -1,0 +1,11 @@
+1 - 新建数据库
+    DB: sobot
+        T1: user_info
+        T2: bot_account
+            username
+            password
+            platform_name                   # facebook/twitter
+        T3: _       # follow etc.
+
+
+
