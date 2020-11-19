@@ -7,11 +7,33 @@
     <link rel="stylesheet" href="/static/plugins/fa/css/font-awesome.min.css">
     <script src="/static/plugins/jquery-3.4.1.js"></script>
     <script src="/static/plugins/bs/js/bootstrap.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
 </head>
 <body>
 
-管理
+{% load components %}
+{% get_header_info 'Http' %}
 
+<div class="container-fluid">
+		<div class="row">
+		<div class="col-md-2" style="">
+			{% left_bar %}
+		</div>
+		<div class="col-md-10" style="">
+
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<hr/>
+
+</div>
 
 </body>
 </html>

@@ -25,3 +25,10 @@ def header_line():
     
     
     return locals()
+
+
+@register.inclusion_tag('components/account_table.html')
+def account_table():
+    
+    
+    return locals()

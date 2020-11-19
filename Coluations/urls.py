@@ -20,5 +20,7 @@ from Automan import views
 urlpatterns = [
     path('', views.index),
     path('config', views.config),
+    path('account', views.account),
+    path('other', views.other),
     path('main', views.main),
 ]

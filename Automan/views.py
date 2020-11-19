@@ -29,3 +29,16 @@ def config(request):
 	
 	
 	return render(request, 'pages/config.html', locals())
+
+
+
+def account(request):
+	
+	
+	return render(request, 'pages/account.html', locals())
+
+
+def other(request):
+	
+	
+	return render(request, 'pages/other.html', locals())
