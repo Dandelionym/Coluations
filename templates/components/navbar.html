@@ -1,37 +1,63 @@
 <div>
 	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">云社交机器人管理平台</a>
-    </div>
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+				        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">云社交机器人管理平台</a>
+			</div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">控制端<span class="sr-only">(current)</span></a></li>
-        <li><a href="#"></a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="glyphicon glyphicon-eye-open" style="vertical-align: -2px"></i> <span class="small">12</span></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle-o"></i> Admin<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li id="go_main1" class=""><a href="#">主控制端<span class="sr-only">(current)</span></a></li>
+					<li id="go_account1"><a href="#">账号管理</a></li>
+					<li id="go_config1"><a href="#">策略配置</a></li>
+					<li id="go_other1"><a href="#">其他配置</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="#">
+						<svg style="vertical-align: -3px" t="1605883908970" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1408" width="15" height="15"><path d="M638.848 840.832c-0.128 71.488-63.872 129.408-143.68 129.408-79.296 0-143.552-57.664-143.68-129.408h287.36zM590.912 86.592c0-47.488-42.88-86.208-95.744-86.208-52.8 0-95.808 38.592-95.808 86.208 0 4.864 0.448 9.6 1.28 14.272-132.224 41.472-240.768 168.96-240.768 319.616v118.72s0 170.88-46.656 172.416c-27.776 0-49.088 19.328-49.088 43.072 0 24 21.44 43.136 47.872 43.136h766.336c26.56 0 47.872-19.328 47.872-43.136 0-23.936-21.44-43.072-47.872-43.072-47.936 0-47.936-171.2-47.936-171.2V420.48c0-150.976-101.44-278.4-240.768-319.808 0.896-4.672 1.28-9.408 1.28-14.08z" p-id="1409" fill="#d81e06"></path></svg>
+						<span class="small text-danger">12</span>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+						   aria-expanded="false"><i class="fa fa-user-circle-o"></i> Admin<span
+								class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 </div>
+
+
+<script>
+    $('#go_main1').click(function () {
+        location.href = 'main'
+    })
+    $('#go_account1').click(function () {
+        location.href = 'account'
+    })
+    $('#go_config1').click(function () {
+        location.href = 'config'
+    })
+    $('#go_other1').click(function () {
+        location.href = 'other'
+    })
+</script>
