@@ -77,13 +77,13 @@ USE_TZ = False
 
 DATABASES = {
 	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'CentDB3',
-		'USER': 'root',
-		'PASSWORD': 'smile0217',
-		'HOST': 'localhost',
-		'POST': 3306,
-		'OPTIONS': {"init_command": "SET foreign_key_checks = 0;"},
+		# 'ENGINE': 'django.db.backends.mysql',
+		# 'NAME': 'CentDB3',
+		# 'USER': 'root',
+		# 'PASSWORD': 'smile0217',
+		# 'HOST': 'localhost',
+		# 'POST': 3306,
+		# 'OPTIONS': {"init_command": "SET foreign_key_checks = 0;"},
 	}
 }
 

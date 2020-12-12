@@ -7,63 +7,55 @@
 		{#border: 2px silver solid;#}
 		overflow-x: scroll;
 	}
+	.table tr th {
+		text-align: center !important;
+	}
+	.table tr td {
+		text-align: center !important;
+	}
 </style>
 
 <div class="panel panel-default">
-	<div class="panel-heading">Panel heading</div>
+	<div class="panel-heading">用户信息表</div>
 	<div class="panel-body"><p>
 
 	</p></div>
 	<table class="table" style="">
 		<thead>
 		<tr>
-			<th>nid</th>
-			<th>username</th>
-			<th>userwork</th>
-			<th>university</th>
-			<th>lives</th>
-			<th>hometown</th>
-			<th>high_school</th>
-			<th>contact</th>
-			<th>website</th>
-			<th>gender</th>
-			<th>birthday</th>
-			<th>religion</th>
-			<th>user_language</th>
-			<th>interested</th>
-			<th>relationship</th>
-			<th>about</th>
-			<th>other_names</th>
-			<th>quotes</th>
-			<th>user_events</th>
+			<th>序号</th>
+			<th>平台</th>
+			<th>姓名</th>
+			<th>性别</th>
+
+			<th>工作</th>
+			<th>生日</th>
+			<th>学校</th>
+			<th>民族</th>
+			<th>操作</th>
 		</tr>
 		</thead>
 		<tbody>
+		{% for user in user_list %}
 		<tr>
-			<td>nid</td>
-			<td>username</td>
-			<td>userwork</td>
-			<td>university</td>
-			<td>lives</td>
-			<td>hometown</td>
-			<td>high_school</td>
-			<td>contact</td>
-			<td>website</td>
-			<td>gender</td>
-			<td>birthday</td>
-			<td>religion</td>
-			<td>user_language</td>
-			<td>interested</td>
-			<td>relationship</td>
-			<td>about</td>
-			<td>other_names</td>
-			<td>quotes</td>
-			<td>user_events</td>
+			<td>{{ forloop.counter }}</td>
+			<td>Twitter</td>
+			<td>{{ user.username }}</td>
+			{% if user.gender == 'Male' %}
+				<td><i class="fa fa-male" style="color: royalblue"></i></td>
+			{% else %}
+				<td><i class="fa fa-female" style="color: palevioletred"></i></td>
+			{% endif %}
+
+			<td>{{ user.userwork }}</td>
+			<td>{{ user.birthday }}</td>
+			<td>{{ user.university }}</td>
+			<td>{{ user.religion }}</td>
+			<td>
+				<button class="btn btn-danger small" style="height: 25px; vertical-align: -5px; line-height: 1">删除</button>
+			</td>
 		</tr>
+		{% endfor %}
 		</tbody>
 	</table>
 </div>
-
-
-
-
