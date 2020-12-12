@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/plugins/bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/plugins/fa/css/font-awesome.min.css">
+    <script src="/static/plugins/jquery-3.4.1.js"></script>
+    <script src="/static/plugins/bs/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+{% load components %}
+{% get_header_info 'Http' %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2" style="">
+            {% left_bar %}
+
+        </div>
+        <div class="col-md-10">
+            <div><h3><label for="content_item">发布帖子</label></h3></div>
+            <hr/>
+            <div>
+                <form method="post" enctype="multipart/form-data" action="upload_file/" class="form-floating">
+                    <textarea name="content" class="form-control" placeholder="输入你要发布的内容..." id="content_item"
+                              style="width: 100%; height: 300px">
+                    </textarea>
+                    <input id="file_item" type="file" name="myFile" style="width: 500px; margin: 50px" >
+                    <input id="publish_item" class="btn btn-success" type="submit" value="上传并发布">
+                    {% csrf_token %}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+
+</script>
+
+
+</body>
+</html>

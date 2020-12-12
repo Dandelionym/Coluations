@@ -6,6 +6,8 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '10.100.60.223', '192.168.1.29']
 
 CACHE_BACKEND = "locmem://"
 
+APPEND_SLASH=False
+
 INSTALLED_APPS = [
 	'django.contrib.auth',
 	'django.contrib.contenttypes',

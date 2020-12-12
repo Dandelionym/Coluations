@@ -32,7 +32,7 @@ class SqlHelper(object):
         self.cursor.executemany(sql, args)
         self.conn.commit()
 
-    def creat(self, sql, args):
+    def create(self, sql, args):
         self.cursor.execute(sql, args)
         self.conn.commit()
         return self.cursor.lastrowid
