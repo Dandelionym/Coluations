@@ -25,7 +25,7 @@
             {% left_bar %}
 
         </div>
-        <div class="col-md-10">
+        <div class="col-md-9">
             <div><h3><label for="content_item">发布帖子</label></h3></div>
             <hr/>
             <div>
@@ -33,17 +33,41 @@
                     <textarea name="content" class="form-control" placeholder="输入你要发布的内容..." id="content_item"
                               style="width: 100%; height: 300px">
                     </textarea>
-                    <input id="file_item" type="file" name="myFile" style="width: 500px; margin: 50px" >
+                    <input id="file_item" type="file" name="myFile" style="width: 500px; margin: 50px">
                     <input id="publish_item" class="btn btn-success" type="submit" value="上传并发布">
                     {% csrf_token %}
                 </form>
             </div>
+
+            <div class="row" style="margin-top: 50px">
+                <h3>历史发布</h3>
+                <hr>
+                {% for item in p_list %}
+                    {% if item.status %}
+                        <div class="alert alert-success" role="alert">
+                            <a href="#" class="alert-link">
+                                <h5>{{ item.release_time }}</h5>
+                                <p>{{ item.content }}</p>
+                            </a>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-info" role="alert">
+                            <a href="#" class="alert-link">
+                                <h5>{{ item.release_time }}</h5>
+                                <p>{{ item.content }}</p>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
+
+    <hr>
+
 </div>
 
 <script>
-
 
 
 </script>

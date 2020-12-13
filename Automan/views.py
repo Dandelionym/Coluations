@@ -35,6 +35,10 @@ def other(request):
 
 
 def publish(request):
+
+    sql = SqlHelper()
+    p_list = sql.get_list('select * from publish', [])
+    sql.close()
     return render(request, 'pages/publish.html', locals())
 
 
@@ -53,6 +57,6 @@ def upload_file(request):
             sql = SqlHelper()
             import datetime
             time = datetime.datetime.now()
-            sql.create('insert into publish(content, media, release_time) VALUES (%s, %s, %s);',[content[0], File.name, time])
+            sql.create('insert into publish(content, media, release_time) VALUES (%s, %s, %s);',[content, File.name, time])
             sql.close()
             return HttpResponse("上传成功！请退回上一个地址")
